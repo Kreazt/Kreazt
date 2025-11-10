@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Style | Poleras Sublimadas</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 2px solid #ffffff;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-container img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .logo-container h1 {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      color: #000000;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+    }
+
+    nav a:hover {
+      color: #ff3c00;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background-image: url('fondokreazt.png');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 2px 2px 10px #000;
+      position: relative;
+    }
+
+    /* Fondo translúcido rojo y animación */
+    .hero h2 {
+      background: rgba(255, 0, 0, 0.35); /* Rojo claro transparente */
+      padding: 15px 35px;
+      border-radius: 15px;
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1.5s ease-out forwards;
+    }
+
+    .hero p {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 10px 25px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      color: #fff;
+      text-shadow: 1px 1px 8px #000;
+      margin-top: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 2s ease-out forwards;
+    }
+
+    /* Animación de entrada */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .producto {
+      background-color: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .producto:hover {
+      transform: scale(1.05);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    /* Solo el precio visible */
+    .producto p {
+      color: #000000;
+      margin: 1rem 0;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background-color: #000000;
+      text-align: center;
+      padding: 1rem;
+      border-top: 2px solid #000000;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        font-size: 0.9rem;
+      }
+      nav a img {
+        width: 18px;
+      }
+      .hero h2 {
+        font-size: 2rem;
+        padding: 10px 20px;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="logotip.jpg" alt="Logo Kreazt">
+      <h1>Kreazt</h1>
+    </div>
+    <nav>
+      <a href="https://www.tiktok.com/@kreazt.scz?lang=es-419"><img src="TikTok.png" alt="TikTok">TikTok</a>
+      <a href="https://www.instagram.com/kreazt.scz/?utm_source=ig_web_button_share_sheet"><img src="Instagram.png" alt="Instagram">Instagram</a>
+      <a href="https://wa.me/59178049582"><img src="Whatsapp.png" alt="Whatsapp">Whatsapp</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Poleras Sublimadas</h2>
+    <p>Diseños únicos y estilos personalizados.</p>
+  </section>
+
+  <section id="coleccion">
+    <h2>STOCK</h2>
+    <div class="productos">
+      <!-- Solo imagen y precio -->
+      <div class="producto"><img src="1m.jpg" alt="Polera 1"><p>Bs.90</p></div>
+      <div class="producto"><img src="2m.jpg" alt="Polera 2"><p>Bs.90</p></div>
+      <div class="producto"><img src="3m.jpg" alt="Polera 3"><p>Bs.110</p></div>
+      <div class="producto"><img src="4m.jpg" alt="Polera 4"><p>Bs.110</p></div>
+      <div class="producto"><img src="5m.jpg" alt="Polera 5"><p>Bs.110</p></div>
+      <div class="producto"><img src="6m.jpg" alt="Polera 6"><p>Bs.110</p></div>
+      <div class="producto"><img src="7m.jpg" alt="Polera 7"><p>Bs.110</p></div>
+      <div class="producto"><img src="8m.jpg" alt="Polera 8"><p>Bs.110</p></div>
+      <div class="producto"><img src="9m.jpg" alt="Polera 9"><p>Bs.80</p></div>
+      <div class="producto"><img src="10m.jpg" alt="Polera 10"><p>Bs.90</p></div>
+      <div class="producto"><img src="11m.jpg" alt="Polera 11"><p>Bs.110</p></div>
+      <div class="producto"><img src="12m.jpg" alt="Polera 12"><p>Bs.110</p></div>
+      <div class="producto"><img src="13m.jpg" alt="Polera 13"><p>Bs.110</p></div>
+      <div class="producto"><img src="14m.jpg" alt="Polera 14"><p>Bs.80</p></div>
+      <div class="producto"><img src="15m.jpg" alt="Polera 15"><p>Bs.80</p></div>
+      <div class="producto"><img src="16m.jpg" alt="Polera 16"><p>Bs.80</p></div>
+      <div class="producto"><img src="17m.jpg" alt="Polera 17"><p>Bs.110</p></div>
+      <div class="producto"><img src="18m.jpg" alt="Polera 18"><p>Bs.110</p></div>
+      <div class="producto"><img src="19m.jpg" alt="Polera 19"><p>Bs.110</p></div>
+      <div class="producto"><img src="20m.jpg" alt="Polera 20"><p>Bs.110</p></div>
+      <div class="producto"><img src="21m.jpg" alt="Polera 21"><p>Bs.80</p></div>
+      <div class="producto"><img src="22m.jpg" alt="Polera 22"><p>Bs.80</p></div>
+      <div class="producto"><img src="23m.jpg" alt="Polera 23"><p>Bs.90</p></div>
+      <div class="producto"><img src="24m.jpg" alt="Polera 24"><p>Bs.80</p></div>
+</div>
+  </section>
+
+  <footer>
+    <p>© 2025 Unique Style - Kreazt</p>
+  </footer>
+
+</body>
+</html>
